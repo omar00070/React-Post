@@ -1,10 +1,19 @@
 import React, { useState, useContext } from "react";
 import { PostContext } from "../context/PostContext";
 
-export const AddPost = () => {
+export const AddPost = ({ setAdd }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
   const [posts, setPosts] = useContext(PostContext);
+
+  const d = new Date();
+  const [min, hour, day, month, year] = [
+    d.getMinutes(),
+    d.getHours(),
+    d.getDate(),
+    d.getMonth(),
+    d.getFullYear(),
+  ];
 
   const titleChange = (e) => {
     setTitle(e.target.value);
@@ -15,12 +24,15 @@ export const AddPost = () => {
   const addPost = (e) => {
     e.preventDefault();
     const post = {
+      id: Math.random() * 10000,
       title: title,
       content: content,
+      time_posted: [min, hour, day, month, year],
     };
     setPosts((prevPosts) => [...prevPosts, post]);
     setTitle("");
     setContent("");
+    setAdd(false);
   };
 
   return (

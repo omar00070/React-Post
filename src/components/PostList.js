@@ -17,6 +17,7 @@ export const PostList = () => {
           title={post.title}
           content={post.content}
           key={post.id}
+          time_posted={post.time_posted}
           edited={post.edited ? true : false}
           editPost={editPost}
           setPosts={setPosts}
