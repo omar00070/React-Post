@@ -13,7 +13,7 @@ export const Profile = () => {
       <div className="post col card posts">
         <h3>Omar Salameh</h3>
         <p>Number of Posts: {posts.length}</p>
-        <p>{latestPost ? "Latest Posts: " + latestPost.title : ""}</p>
+        <p>{latestPost ? "Latest Post: " + latestPost.title : ""}</p>
         <button
           style={add ? styles : undefined}
           className="edit-btn"
