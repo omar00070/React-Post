@@ -32,7 +32,7 @@ export const AddPost = ({ setAdd }) => {
     setPosts((prevPosts) => [...prevPosts, post]);
     setTitle("");
     setContent("");
-    setAdd(false);
+    if (document.URL.includes("/profile")) setAdd(false);
   };
 
   return (

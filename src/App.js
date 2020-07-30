@@ -12,12 +12,18 @@ function App() {
     <div className="App">
       <PostProvider>
         <Router>
-          <Nav />
-          <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/profile/" component={Profile} />
-          </Switch>
-          <Footer />
+          <div className="page">
+            <div className="top">
+              <Nav />
+              <Switch>
+                <Route path="/" exact component={Home} />
+                <Route path="/profile/" component={Profile} />
+              </Switch>
+            </div>
+            <div>
+              <Footer />
+            </div>
+          </div>
         </Router>
       </PostProvider>
     </div>

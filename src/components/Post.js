@@ -22,7 +22,7 @@ export const Post = ({ id, title, content, setPosts, edited, time_posted }) => {
               time_posted[3] +
               "-" +
               time_posted[2] +
-              " at: " +
+              " at " +
               time_posted[1] +
               ":" +
               time_posted[0]}

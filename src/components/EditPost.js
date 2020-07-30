@@ -62,7 +62,6 @@ export const EditPost = ({ id, edit, setEdit }) => {
           placeholder="content"
         ></textarea>
         <button onClick={editPost}>Done</button>
-        <div></div>
       </form>
     </>
   );

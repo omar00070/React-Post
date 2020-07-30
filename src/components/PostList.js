@@ -10,7 +10,7 @@ export const PostList = () => {
   };
 
   return (
-    <div className="col">
+    <div className="col posts">
       {posts.map((post) => (
         <Post
           id={post.id}
